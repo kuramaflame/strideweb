@@ -6,14 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Listing extends Component
+class texta extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $rows,
+        public string $name,
+        public string $id,
+
+    )
     {
-        //
     }
 
     /**
@@ -21,6 +25,6 @@ class Listing extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.listing');
+        return view('components.texta');
     }
 }
